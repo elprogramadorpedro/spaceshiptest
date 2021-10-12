@@ -11,14 +11,16 @@ const Planets = () => {
       <hr />
       <Planet
         name="Mercurio"
-        description="Mercúrio é um dos quatro planetas telúricos do Sistema Solar e seu corpo é rochoso como a Terra. É o menor planeta do sistema solar, com um raio equatorial de 2 439,7 km.[9] Mercúrio é menor até que os dois maiores satélites naturais do sistema solar, as luas Ganimede e Titã, embora seja mais massivo. O planeta é formado de aproximadamente 70% de material metálico e 30% de silicatos.[10] Sua densidade é a segunda maior do sistema solar, de 5,427 g/cm³, um pouco menor apenas do que a terrestre, de 5,515 g/cm³.[9] Se o efeito da compressão gravitacional fosse retirado, os materiais constituintes de Mercúrio seriam mais densos, com uma densidade não comprimida de 5,3 g/cm³, contra a terrestre de 4,4 g/cm³.["
+        description="Mercurio es el planeta del sistema solar más cercano al Sol y el más pequeño. Forma parte de los denominados planetas interiores y carece de satélites naturales al igual que Venus. Se conocía muy poco sobre su superficie hasta que fue enviada la sonda planetaria Mariner 10 y se hicieron observaciones con radar y radiotelescopios. Posteriormente fue estudiado por la sonda MESSENGER de la NASA y actualmente la astronave de la Agencia Europea del Espacio (ESA) denominada BepiColombo, lanzada en octubre de 2018, se halla en vuelo rumbo a Mercurio a donde llegará en 2025 y se espera que aporte nuevos conocimientos sobre el origen y composición del planeta, así como de su geología y campo magnético."
+        link="https://es.wikipedia.org/wiki/Mercurio_(planeta)"
         img_url="https://upload.wikimedia.org/wikipedia/commons/6/68/Artist%27s_conception_of_Sedna.jpg/"
       />
 
       <hr />
       <Planet
         name="Sedna"
-        description="Sedna es el cuerpo menor del sistema solar número 90377;7​n. 3​ concretamente es un objeto transneptuniano. En 2012 se encontraba aproximadamente tres veces más lejos del Sol que Neptuno. Durante la mayor parte de su órbita está incluso más lejos del Sol, con su afelio estimado en 960 unidades astronómicas (ua) —32 veces la distancia de Neptuno—, por lo que es uno de los objetos más lejanos conocidos del sistema solar, que no sean los cometas de período largo.n"
+        description="Sedna es el cuerpo menor del sistema solar número 90377;7​n. 3​ concretamente es un objeto transneptuniano. En 2012 se encontraba aproximadamente tres veces más lejos del Sol que Neptuno. Durante la mayor parte de su órbita está incluso más lejos del Sol, con su afelio estimado en 960 unidades astronómicas (ua) —32 veces la distancia de Neptuno—, por lo que es uno de los objetos más lejanos conocidos del sistema solar, que no sean los cometas de período largo.n. 4​n. 5​ La órbita excepcionalmente larga y elongada de Sedna, que tarda unos 11 400 años en completarse, y su lejano punto de máxima aproximación al Sol, a 76 ua, han dado lugar a mucha especulación en cuanto a su origen."
+        link="https://es.wikipedia.org/wiki/(90377)_Sedna"
         img_url='https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg'
       />
       <Footers />

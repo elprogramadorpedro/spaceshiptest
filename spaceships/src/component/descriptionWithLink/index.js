@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import "rbx/index.css";
+
+
+
 const DescriptionWithLink=(props)=>{
+    if(props.link){
     return(
-        <div>
+        <Fragment>
         <p>{props.description}</p>
         <a href={props.link}>{props.link}</a>
-        </div>
-    )
+        </Fragment>)
+        }else{
+            return(
+             <u><p>{props.description}</p></u>
+             )
+        }
+    
 }
 
 export default DescriptionWithLink
+

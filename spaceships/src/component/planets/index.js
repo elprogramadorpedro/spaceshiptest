@@ -18,7 +18,7 @@ const Planets = () => {
       <hr />
       <Planet clickOnPlanet={clickOnPlanet}
         name="Mercurio"
-        description="Mercurio es el planeta del sistema solar más cercano al Sol y el más pequeño. Forma parte de los denominados planetas interiores y carece de satélites naturales al igual que Venus. Se conocía muy poco sobre su superficie hasta que fue enviada la sonda planetaria Mariner 10 y se hicieron observaciones con radar y radiotelescopios. Posteriormente fue estudiado por la sonda MESSENGER de la NASA y actualmente la astronave de la Agencia Europea del Espacio (ESA) denominada BepiColombo, lanzada en octubre de 2018, se halla en vuelo rumbo a Mercurio a donde llegará en 2025 y se espera que aporte nuevos conocimientos sobre el origen y composición del planeta, así como de su geología y campo magnético."
+        
         link="https://es.wikipedia.org/wiki/Mercurio_(planeta)"
         img_url="https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg"
         title_with_underline={true}

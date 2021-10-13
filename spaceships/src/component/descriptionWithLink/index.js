@@ -4,6 +4,10 @@ import "rbx/index.css";
 
 
 const DescriptionWithLink=(props)=>{
+
+    if(!props.description)
+    return null; 
+
     if(props.link){
     return(
         <Fragment>

@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect} from "react";
 import "rbx/index.css";
 import Planet from "./planet";
 import Footers from "../footers";
+
 /*
 const clickOnPlanet=(name)=>{
     console.log(`clicando planeta: ${name}`)
@@ -16,7 +17,18 @@ const clickOnPlanet=(name)=>{
 
 
 
-class Planets extends React.Component{
+const Planets =()=> {
+
+  const [planets, setPlanets] = useState([
+  ])
+
+  useEffect(()=>{ 
+    getPlanets().then(data=>{
+      setPlanets(data['planets'])
+    })
+    }, [])
+
+ /* 
   constructor(props){
     super(props);
     this.state={
@@ -33,19 +45,30 @@ class Planets extends React.Component{
       }))
     })
       }
-  
+*/  
 
+const removeLast=()=>{
+        let new_planets=[...planets]
+        new_planets.pop()
+        setPlanets(new_planets)
+      }
 
+const duplicateLastPlanet= () =>{
+  let last_planet=planets[planets.length -1]
+  setPlanets([...planets, last_planet])
+}
 
-  render(){
     return (
       <div>
+
+
         <Fragment> Planet List</Fragment>
         <hr />
+        <button onClick={removeLast}>Remove </button>
+        <button onClick={duplicateLastPlanet}>Duplicate </button>   
         
-       
-        <hr />
-        {this.state.planets.map((planet,index)=>
+             <hr />
+        {planets.map((planet,index)=>
         <Planet
         
           key={index}
@@ -67,7 +90,7 @@ class Planets extends React.Component{
   
       </div>
     );
-  }
+  
   
 }
 

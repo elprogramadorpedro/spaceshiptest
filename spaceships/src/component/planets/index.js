@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect} from "react";
 import "rbx/index.css";
 import Planet from "./planet";
 import Footers from "../footers";
+import Form from "./form";
 
 /*
 const clickOnPlanet=(name)=>{
@@ -28,6 +29,12 @@ const Planets =()=> {
     })
     }, [])
 
+//nuevo metodo para adicionar planetas 
+
+const addPlanet=(new_planets)=>{
+ setPlanets([...planets, new_planets])
+}
+
  /* 
   constructor(props){
     super(props);
@@ -47,6 +54,8 @@ const Planets =()=> {
       }
 */  
 
+
+/*
 const removeLast=()=>{
         let new_planets=[...planets]
         new_planets.pop()
@@ -57,15 +66,18 @@ const duplicateLastPlanet= () =>{
   let last_planet=planets[planets.length -1]
   setPlanets([...planets, last_planet])
 }
-
+*/
     return (
       <div>
 
 
         <Fragment> Planet List</Fragment>
         <hr />
-        <button onClick={removeLast}>Remove </button>
-        <button onClick={duplicateLastPlanet}>Duplicate </button>   
+        
+        <Form addPlanet= {addPlanet}/>
+         
+        <hr />
+         
         
              <hr />
         {planets.map((planet,index)=>

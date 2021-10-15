@@ -1,11 +1,11 @@
 import React from "react";
 import "rbx/index.css";
-import Planets from "./component/planets";
+import Routes from "./routes";
 
 function App() {
   return (
     <div>
-      <Planets></Planets>
+      <Routes></Routes>
     </div>
   );
 }

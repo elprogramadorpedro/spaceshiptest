@@ -2,7 +2,6 @@
 
 import React from "react";
 import DescriptionWithLink from "../../descriptionWithLink";
-
 import GrayImg from "../../shared/gray_img";
 
 

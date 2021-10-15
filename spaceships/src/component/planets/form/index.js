@@ -33,19 +33,19 @@ return(
     <Fragment>
         <form onSubmit={handleSubmit}>
         <div>
-        <label htmlForm="name">Name:</label>
+        <label htmlFor="name">Name:</label>
         <input id="name" type="text" name="name" value={fields.name}  onChange={handleFieldsChange}/>
         </div>
         <div>
-        <label htmlForm="name">Description:</label>
+        <label htmlFor="name">Description:</label>
         <input id="description" type="text" name="description" value={fields.description}  onChange={handleFieldsChange}/>
         </div>
         <div>
-        <label htmlForm="name">Img_url:</label>
+        <label htmlFor="name">Img_url:</label>
         <input id="img_url" type="text" name="img_url" value={fields.img_url}  onChange={handleFieldsChange}/>
         </div>
         <div>
-        <label htmlForm="name">link:</label>
+        <label htmlFor="name">link:</label>
         <input id="link" type="text" name="link" value={fields.link}  onChange={handleFieldsChange}/>
         </div>
         <br/>

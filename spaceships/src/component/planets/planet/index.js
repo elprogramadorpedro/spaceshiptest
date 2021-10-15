@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
 
-import React,{useEffect, useState} from "react";
+import React,{Fragment, useEffect, useState} from "react";
 import DescriptionWithLink from "../../descriptionWithLink";
 import GrayImg from "../../shared/gray_img";
+import Forms from "./form";
 
 async function getSatellites(id){
     let response = await fetch(`http://localhost:3000/api/${id}.json`)
@@ -22,6 +23,10 @@ const Planet =(props)=>{
       setSatellites(data['satellites'])
     })
     }, [])
+
+    const addSatellite=(new_satellite)=>{
+      setSatellites([...satellites, new_satellite])
+     }
   /*
   constructor(props){
     super(props)
@@ -49,7 +54,10 @@ const Planet =(props)=>{
        {title}
         <DescriptionWithLink description={props.description} link={props.link}/>
         <GrayImg img_url={props.img_url} gray={props.gray}/>
-        
+        <h4>satellite</h4>
+        <hr/>
+   <Forms addSatellite>{addSatellite}</Forms>
+        <hr/>
   <ol>
     {satellites.map((satellite, index)=>
       <li key={index}>{satellite.name}</li>
@@ -60,7 +68,7 @@ const Planet =(props)=>{
     );
 
 }
-
+  
 
 
 

@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 
-import React, { Fragment, useEffect, useState } from "react";
+import React, {useEffect, useState, Redirect } from "react";
 import DescriptionWithLink from "../descriptionWithLink"
 import GrayImg from "../shared/gray_img";
 import Forms from "./form";
 
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 
 async function getPlanet(id) {
   let response = await fetch(`http://localhost:3000/api/${id}.json`);
@@ -16,13 +17,25 @@ async function getPlanet(id) {
 const Planet = () => {
   const [satellites, setSatellites] = useState([]);
   const [planet, setPlanet] = useState({});
+  const [redirect, setRedirect]=useState(false);
+
 let {id} = useParams();
+let history= useHistory();
+
+
 
   useEffect(() => {
-    getPlanet(id).then((data) => {
-      setPlanet(data["data"]);
+    getPlanet(id).then(data => {
+        setSatellites(data['satellites']);
+        setPlanet(data['data']);
+    }, error=>{
+        setRedirect(true);
     });
-  }, []);
+  }, [])
+
+  const goToPlanets=()=>{
+      history.push('/')
+  }
 
   const addSatellite = (new_satellite) => {
     setSatellites([...satellites, new_satellite]);
@@ -36,6 +49,9 @@ let {id} = useParams();
       </h4>
     );
   else title = <h4>{planet.name}</h4>;
+
+  if(redirect)
+       return <Redirect to='/'/>
   return (
     <div>
       {title}
@@ -50,6 +66,8 @@ let {id} = useParams();
           <li key={index}>{satellite.name}</li>
         ))}
       </ol>
+      <hr/>
+      <button type="button" onClick={goToPlanets}>Voltar a listagem!</button>
     </div>
   );
 };

@@ -1,21 +1,21 @@
-import React from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import PlanetsScreen from './screens/planets'
-import PlanetScreen from './screens/planet'
-const Routes = () =>(
-    <BrowserRouter>
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import PlanetsScreen from "./screens/planets";
+import PlanetScreen from "./screens/planet";
+import NotFountScreen from "./screens/notFound";
+const Routes = () => (
+  <BrowserRouter>
     <Switch>
-    <Route exact path='/' component={PlanetsScreen}/>
-  
-    <Route exact path='/planet/:id' component={PlanetScreen}/>
-
-   
+      <Route exact path="/" component={PlanetsScreen} />
+      <Route exact path="/planet/:id" component={PlanetScreen} />
+      <Route exact path="*">
+        <NotFountScreen />
+      </Route>
     </Switch>
-    </BrowserRouter>
-
-)
+  </BrowserRouter>
+);
 /*
 <BrowserRouter>
 </BrowserRouter>*/
 
-export default Routes
+export default Routes;
